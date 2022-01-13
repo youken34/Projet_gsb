@@ -225,7 +225,7 @@ label {
 				        <input class="login__submit" type="submit" value="connexion">
                         </input>
                     </form>
-                    <form action="http://localhost:3000/Inscription&connexion/inscription.php" method="POST">
+                    <form action="http://localhost:3000/app/Views/inscription.php" method="POST">
                     <!-- Formulaire d'inscription -->
                         <input class="login__submit" type="submit" value="Inscription">	
                     </form>		
