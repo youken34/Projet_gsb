@@ -6,6 +6,6 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('inscription.php');
+        return view('index.php');
     }
 }
