@@ -23,7 +23,7 @@ $insérer = $connexion->prepare('INSERT INTO authentification
 $insérer->execute(array($nom_utilisateur, $prenom_utilisateur, $mail_utilisateur, 
 $identifiant_utilisateur, $mdp_utilisateur));
 
-header('location:http://localhost:3000/Inscription&connexion/index.php');
+header('location:http://localhost:3000/app/Views/index.php');
 }
 else {
     echo "<script type=\"text/javascript\">window.alert ('Veuillez remplir tous les champs'); 

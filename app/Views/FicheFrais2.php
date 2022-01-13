@@ -221,7 +221,7 @@ label {
 		        <div class="screen__content">
                         
                     <!-- Formulaire de la fiche de frais -->
-                    <form action ="http://localhost:3000/Frais/frais.php" method="POST">
+                    <form action ="http://localhost:3000/app/Models/frais.php" method="POST">
                         <label for="nbr_km"> Nombre de kilomètre </label><br>
                         <input type="text" name="nbr_km">
 
@@ -248,12 +248,12 @@ label {
                         </form>
                         <input class="login__submit" type="submit"> </input>
 
-                        <form action="http://localhost:3000/Inscription&connexion/deconnexion.php">
+                        <form action="http://localhost:3000/app/Models/deconnexion.php">
 				        <input class="login__submit" type="submit" value="Deconnexion">
                         </input>
                     </form>
 
-                    <form action="http://localhost:3000/Inscription&connexion/index.php" method="POST">                  
+                    <form action="http://localhost:3000/app/Views/index.php" method="POST">                  
                         <input class="login__submit" type="submit" value="Connexion">	
                     </form>		
                     

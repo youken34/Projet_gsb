@@ -205,7 +205,7 @@ label {
 		        <div class="screen__content">
                         
                     <!-- Formulaire de connexion -->
-                    <form action="http://localhost:3000/Inscription&connexion/page-inscription.php" method="POST">
+                    <form action="http://localhost:3000/app/Models/page-inscription.php" method="POST">
                         <label>Nom : </label> <br>
                         <input type="text" name="nom"class="login__input"/>
                       
@@ -225,7 +225,7 @@ label {
                         </input>
                     </form>
                     <!-- Formulaire d'inscription -->
-                    <form action="http://localhost:3000/Inscription&connexion/index.php" method="POST">                  
+                    <form action="http://localhost:3000/app/Views/index.php" method="POST">                  
                         <input class="login__submit" type="submit" value="Connexion">	
                     </form>		
             </div>

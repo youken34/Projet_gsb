@@ -32,7 +32,7 @@ if (!empty($_POST['identifiant-co'] && $_POST['mdp-co'])) {
            header('location:index.php'); 
        } */
        if ($recup_user->rowCount() > 0) {
-           header('location: http://localhost:3000/Frais/FicheFrais2.php');
+           header('location: http://localhost:3000/app/Views/FicheFrais2.php');
            $_SESSION['connecté'] = TRUE;
        } 
        else {

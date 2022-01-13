@@ -20,12 +20,12 @@ $resql = $insérer->execute(array($nombre_km, $coutkm, $restau, $htl, $event));
 var_dump($insérer->errorInfo());
 
 echo "Données retourné";
-header('Location: http://localhost:3000/Frais/FicheFrais2.php');
+header('Location: http://localhost:3000/app/Views/FicheFrais2.php');
 }
 
 else{
     echo 'Erreur';
-    header('Location: http://localhost:3000/Frais/FicheFrais2.php');
+    header('Location: http://localhost:3000/app/Views/FicheFrais2.php');
 }
 
 

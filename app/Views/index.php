@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['connecté'])) {
     if ($_SESSION['connecté'] == TRUE) {
         echo "<script type=\"text/javascript\">window.alert ('Vous êtes déjà connecté'); 
-        window.location='http://localhost:3000/Frais/FicheFrais2.php'; </script>";
+        window.location='http://localhost:3000/app/Views/FicheFrais2.php'; </script>";
     }
 }
 
@@ -213,7 +213,7 @@ label {
 		        <div class="screen__content">
 				    
                     <!-- Formulaire de connexion -->
-                    <form action="http://localhost:3000/Inscription&connexion/confirmation-connexion.php" method="POST">
+                    <form action="http://localhost:3000/app/Models/confirmation-connexion.php" method="POST">
 					<div class="login__field"> 
                         <label>Identifiant : </label>
                         <input type="text" name="identifiant-co" class="login__input"/>
@@ -225,7 +225,7 @@ label {
 				        <input class="login__submit" type="submit" value="connexion">
                         </input>
                     </form>
-                    <form action="http://localhost:3000/Inscription&connexion/inscription.php" method="POST">
+                    <form action="http://localhost:3000/app/Views/inscription.php" method="POST">
                     <!-- Formulaire d'inscription -->
                         <input class="login__submit" type="submit" value="Inscription">	
                     </form>		
