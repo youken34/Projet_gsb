@@ -4,6 +4,8 @@ include "fonction-page-accueil.php";
 
 include "config-page-accueil.php";
 $_SESSION['connecté'] = FALSE;
+
+
 # Première méthode 
 $var_recup = GETPDO($config);
 $var_recup_ex = $var_recup->prepare("SELECT `identifiant`, `motDePasse` FROM authentification");

@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "config-frais.php";
 
 function GETPDO($config):PDO {
 /* Grâce à cette fonction, on pourra désormais se connecter à la PDO en utilisant la syntaxe :
