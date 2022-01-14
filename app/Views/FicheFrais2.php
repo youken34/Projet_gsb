@@ -245,13 +245,21 @@ label {
                         <label for="evenementiel"> Evènementiel</label><br>
                         <input type="text" name="Evènementiel">   
                         <br><br>     
-                        </form>
+<<<<<<< HEAD
+                        
+						
+                        <input class="login__submit" type="submit" value="Envoyer"> </input>
+						
+					</form>
+=======
                         <input class="login__submit" type="submit"> </input>
+						</form>
 
+>>>>>>> 1e8671c7610a03fe380e39178d32d27e877abae4
                         <form action="http://localhost:3000/app/Models/deconnexion.php">
 				        <input class="login__submit" type="submit" value="Deconnexion">
                         </input>
-                    </form>
+                    	</form>
 
                     <form action="http://localhost:3000/app/Views/index.php" method="POST">                  
                         <input class="login__submit" type="submit" value="Connexion">	
@@ -268,64 +276,3 @@ label {
 	
 </body>
 </html>
-<!-- 
-<form action ="http://localhost:3000/Frais/frais.php" method="POST">
-
-<h1>Veuillez remplir cette fiche pour vous faire rembourser de vos frais </h1>
-
-<br><br>
-<label for="nbr_km"> Nombre de kilomètre </label>
-<input type="text" name="nbr_km">
-<br><br><br>
-<?php
-//$nbr_km = isset ($_POST["nbr_km"]) ?$_POST['nbr_km'] : null;
-//$cout_km = $nbr_km * 0.5;
-?>
-<div class="d-flex">
-<label for="kilometrique"> Indemnités kilométriques <br> &emsp;</label>
-<input type="text" name="cout_km"> 
-<p>  &emsp; Nombre de kilometres / 2 ( exemple : 100km = 50€) </p>
-<?php
-// echo '<br> <input type="text" disabled name="cout_km" value="'.$nbr_km. '"/>';
-?>
-
-<br><br>
-<?php
-
-// echo  '<input type="text" disabled  name="cout_km" '.$cout_km. '"/>';
-?>
-</div>
-
-
-<br>
-<br>
-
-<label for="restauration"> Restauration</label>
-<input type="text" name="Restauration">
-<br>
-<br>
-<br>
-<label for="hotel"> Hôtel</label>
-<input type="text" name="hôtel">
-<br>
-<br>
-<br>
-<label for="evenementiel"> Evènementiel</label>
-<input type="text" name="Evènementiel">
-<br>
-<br>
-<br>
-
-<br>
-<label for="autre">Pour les demande de remboursement tier, veuillez deposer ci-dessous la facture de la dépense en question.</label><br><br>
-<input type="file">
-
-<button type="submit"> envoyer</button>
-</form> -->
-
-<!-- <form action="http://localhost:3000/Inscription&connexion/index.php">
-<input type="submit" value="Connexion"/>
-</form>
-<form action="http://localhost:3000/Inscription&connexion/deconnexion.php">
-<input type="submit" value="Déconnexion"/>
-</form> -->
