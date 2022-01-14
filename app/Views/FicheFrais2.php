@@ -247,7 +247,6 @@ label {
                         <br><br>     
                         						
                         <input class="login__submit" type="submit" value="Envoyer"> </input>
-						<p>ohoho</p>
 					</form>
                         
                         <form action="http://localhost:3000/app/Models/deconnexion.php">
