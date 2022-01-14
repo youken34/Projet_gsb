@@ -1,7 +1,8 @@
 <?php
+session_start();
 include_once ("fonction-frais.php");
 include_once ("config-frais.php");
-session_start();
+
 
 
 $nombre_km = isset($_POST['nbr_km']) ?$_POST['nbr_km'] : null;

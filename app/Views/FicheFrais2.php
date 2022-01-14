@@ -245,13 +245,15 @@ label {
                         <label for="evenementiel"> Evènementiel</label><br>
                         <input type="text" name="Evènementiel">   
                         <br><br>     
-                        </form>
-                        <input class="login__submit" type="submit"> </input>
-
+                        
+						
+                        <input class="login__submit" type="submit" value="Envoyer"> </input>
+						
+					</form>
                         <form action="http://localhost:3000/app/Models/deconnexion.php">
 				        <input class="login__submit" type="submit" value="Deconnexion">
                         </input>
-                    </form>
+                    	</form>
 
                     <form action="http://localhost:3000/app/Views/index.php" method="POST">                  
                         <input class="login__submit" type="submit" value="Connexion">	
