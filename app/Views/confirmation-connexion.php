@@ -25,9 +25,7 @@ $_SESSION['idd'] = $X;
 
 if (!empty($_POST['identifiant-co'] && $_POST['mdp-co'])) {
     foreach ($données_verif as $données_verif) {
-        echo "zebi <br>";
-        echo($données_verif['identifiant'] . " ");
-        echo($données_verif['motDePasse'] . " ");
+        
 
         /* if ($données_verif['identifiant'] === $X &&
        $données_verif['motDePasse'] === $Y) {
@@ -40,14 +38,14 @@ if (!empty($_POST['identifiant-co'] && $_POST['mdp-co'])) {
        else {
            #header('location:page-inscription.php');
            echo "<script type=\"text/javascript\">window.alert ('Identifiant et/ou Mot de passe incorrect'); 
-        window.location='index.php'; </script>";
+        window.location='../index.php'; </script>";
            $_SESSION['connecté'] = FALSE;
        } 
     }
 }
 else {
     echo "<script type=\"text/javascript\">window.alert ('Veuillez remplir les champs de connexion'); 
-        window.location='index.php'; </script>";
+        window.location='../index.php'; </script>";
 }
 
 ?>

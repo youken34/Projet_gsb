@@ -249,7 +249,7 @@ label {
                         <input class="login__submit" type="submit" value="Envoyer"> </input>
 					</form>
                         
-                        <form action="http://localhost:3000/app/Models/deconnexion.php">
+                        <form action="<?php echo base_url("Front/deconnection")?>">
 				        <input class="login__submit" type="submit" value="Deconnexion">
                         </input>
                     	</form>

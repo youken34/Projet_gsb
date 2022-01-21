@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Test extends BaseController
+class Front extends BaseController
 {
     /* public function index()
     {

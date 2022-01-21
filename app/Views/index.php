@@ -213,7 +213,7 @@ label {
 		        <div class="screen__content">
 				    
                     <!-- Formulaire de connexion -->
-                    <form action="http://localhost:3000/app/Models/confirmation-connexion.php" method="POST">
+                    <form action="<?php echo base_url("Back/confirmationConnexion"); ?>" method="POST">
 					<div class="login__field"> 
                         <label>Identifiant : </label>
                         <input type="text" name="identifiant-co" class="login__input"/>
@@ -225,7 +225,7 @@ label {
 				        <input class="login__submit" type="submit" value="connexion">
                         </input>
                     </form>
-                    <form action="http://localhost:3000/app/Views/inscription.php" method="POST">
+                    <form action="<?php echo base_url("Front/inscription"); ?>" method="POST">
                     <!-- Formulaire d'inscription -->
                         <input class="login__submit" type="submit" value="Inscription">	
                     </form>		
