@@ -3,7 +3,7 @@
 
 
     echo "<script type=\"text/javascript\">window.alert ('Veuillez remplir tous les champs'); 
-        window.location='inscription.php'; </script>";
+        window.location='/Front/inscription'; </script>";
 
 #}
 

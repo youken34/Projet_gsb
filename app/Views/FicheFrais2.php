@@ -1,19 +1,13 @@
 <?php
-session_start();
-/* if (empty($_POST['identifiant-co'])) {
+/*if (empty($_POST['identifiant-co'])) {
     $_SESSION['connecté'] = FALSE;
 } */
 ?>
 
 <div class="message">
 <?php
-if (isset($_SESSION['idd'])) {
-    if ($_SESSION['connecté'] == TRUE) {
-        echo('Bonjour ' .  $_SESSION['idd'] . ' ,Bienvenue !  ');
-    }
-    else {
-        echo'Bonjour, vous n\'etes pas connecté';
-    }
+if ($user_idd && $connected == TRUE) {
+        echo('Bonjour ' .  $user_idd . ' ,Bienvenue !  ');
 }
 else {
     echo'Bonjour, vous n\'etes pas connecté';
@@ -221,7 +215,8 @@ label {
 		        <div class="screen__content">
                         
                     <!-- Formulaire de la fiche de frais -->
-                    <form action ="http://localhost:3000/app/Models/frais.php" method="POST">
+					
+                    <form action ="<?php echo base_url("Back/frais")?>" method="POST">
                         <label for="nbr_km"> Nombre de kilomètre </label><br>
                         <input type="text" name="nbr_km">
 
@@ -254,7 +249,7 @@ label {
                         </input>
                     	</form>
 
-                    <form action="http://localhost:3000/app/Views/index.php" method="POST">                  
+                    <form action="<?php echo base_url("Front/index")?>" method="POST">                  
                         <input class="login__submit" type="submit" value="Connexion">	
                     </form>		
                     

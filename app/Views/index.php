@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['connecté'])) {
     if ($_SESSION['connecté'] == TRUE) {
         echo "<script type=\"text/javascript\">window.alert ('Vous êtes déjà connecté'); 
-        window.location='http://localhost:3000/app/Views/FicheFrais2.php'; </script>";
+        window.location='/Front/FicheFrais2'; </script>";
     }
 }
 
