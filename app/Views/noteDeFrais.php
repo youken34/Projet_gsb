@@ -38,6 +38,7 @@
 </style>
                         <table class="Liam">
                             <tr>
+                            <th>Numéro Factures</th>
                                 <th>Nombre de Kilomètres</th>
                                 <th>Indémnité kilométrique</th>
                                 <th>Restauration</th>
@@ -46,17 +47,19 @@
                             </tr>
     <?php        
 
-                
+                $compteur = 1;
                     foreach ($dataToDisplay as $fetch20) {
                         ?>
                             <tr>
+                              <td> <?php echo $compteur; ?> </td>
                                 <td><?php echo $fetch20['nbr_km']; ?></td>
                                 <td><?php echo $fetch20['cout_km']; ?></td>
                                 <td><?php echo $fetch20['restauration']; ?></td>
                                 <td><?php echo $fetch20['hotel']; ?></td>
                                 <td><?php echo $fetch20['evenementiel']; ?></td>
                             </tr>
-                        <?php
+                            
+                        <?php $compteur = $compteur + 1;
                         }
                 ?>
                 </table>
