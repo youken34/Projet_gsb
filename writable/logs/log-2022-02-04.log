@@ -1,0 +1,20 @@
+CRITICAL - 2022-02-04 05:00:26 --> Undefined variable: dataToDisplay
+#0 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\app\Controllers\Back.php(138): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\B...', 138, Array)
+#1 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\CodeIgniter.php(825): App\Controllers\Back->frais()
+#2 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Back))
+#3 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#6 {main}
+CRITICAL - 2022-02-04 05:03:35 --> Undefined variable: dataToDisplay
+#0 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\app\Views\noteDeFrais.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\B...', 47, Array)
+#1 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\View\View.php(210): include('C:\\wamp64\\www\\B...')
+#2 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\Common.php(1089): CodeIgniter\View\View->render('noteDeFrais.php', Array, true)
+#4 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\app\Controllers\Back.php(139): view('noteDeFrais.php')
+#5 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\CodeIgniter.php(825): App\Controllers\Back->frais()
+#6 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Back))
+#7 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\BTS2SIO_ALT\Projet_GSB_Git\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#10 {main}

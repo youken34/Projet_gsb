@@ -132,13 +132,15 @@ class Back extends BaseController
 
                         echo "Données retourné"; */
                         #header('Location: http://localhost:3000/app/Views/FicheFrais2.php');
-                        #return redirect()->to("/Front/index");
-                        $data = array('user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
-                        return view("FicheFrais2.php", $data);
+                        return redirect()->to("/Front/noteDeFrais");
+                        /*$data = array('user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
+                        return view("FicheFrais2.php", $data); */
+                      
+                        #return view("noteDeFrais.php");
                         }
 
                         else {
-                            return view("frais.php");
+                            return view("FicheFrais2.php");
                         }
                         
                     }
