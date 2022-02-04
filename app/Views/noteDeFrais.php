@@ -22,19 +22,26 @@ if ($connected == FALSE) {
 <style>
 
 .Liam{
+    margin-top : 50px;
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 70%;
     text-align: center ;
-    margin: auto;
+    margin-left : 300px;
+    box-shadow: 0px 0px 15px black;
   }
   
   .Liam td, .Liam th {
     border: 1px solid #ddd;
     padding: 8px;
   }
+  body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+}
   
-  .Liam tr:nth-child(even){background-color: #f2f2f2;}
+  .Liam tr:nth-child(even){background-color: #FFFFFF;}
+  .Liam tr:nth-child(odd){background-color: #C7C5F4;}
+
   
   .Liam tr:hover {background-color: #ddd;}
   

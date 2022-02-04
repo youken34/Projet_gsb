@@ -18,7 +18,7 @@
 					left: 0;
 					background-color: #5C5696;
 					overflow-x: hidden;
-					padding-top: 180px;
+					padding-top: 70px;
 
 					box-shadow: 0px 0px 24px white;
 					/* box-shadow: 0px 0px 24px #5C5696; */
@@ -45,6 +45,10 @@
 					padding: 0px 10px;
 				}
 
+				img {
+					height : 200px;
+				}
+
 				@media screen and (max-height: 450px) {
 					.sidenav {
 						padding-top: 15px;
@@ -60,6 +64,7 @@
 	
 
 			<div class="sidenav wrap">
+			<img src="https://cdn.discordapp.com/attachments/903635476836139078/939172409645334558/Sans_titre_1.png" alt="">
 				<a href="/Front/inscription">Page d'inscription</a> </br></br><br>
 				<a href="/Front/index">Page de connexion</a></br></br><br>
                 <?php 
