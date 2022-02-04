@@ -14,7 +14,9 @@ $_SESSION['prenom'] = "Côme"; */
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>         <!-- Définition du style css !-->
+<body>  
+<?php include "menu.php"; ?> 
+	       <!-- Définition du style css !-->
     <style>
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
