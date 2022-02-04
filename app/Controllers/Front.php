@@ -11,7 +11,10 @@ class Front extends BaseController
 
 
     public function deconnection() {
-        return view("deconnexion.php");
+        $session = session();
+        session_destroy();
+        return redirect()->to("/Front/FicheFrais2");
+        #return view("deconnexion.php");
     }
 
     public function FicheFrais2() {
