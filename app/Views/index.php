@@ -202,11 +202,7 @@ label {
        
        text-align: left;
    }
-   img {
-	   height : 200px;
-	   align-items : center;
-	   justify-content
-   }
+  
         </style> 
         <!-- Formulaire de connexion !-->
 

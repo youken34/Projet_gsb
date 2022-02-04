@@ -226,10 +226,7 @@ label {
 				        <input class="login__submit" type="submit" value="S'inscrire">
                         </input>
                     </form>
-                    <!-- Formulaire d'inscription -->
-                    <form action="<?php echo base_url(); ?>" method="POST">                  
-                        <input class="login__submit" type="submit" value="Connexion">	
-                    </form>		
+                    <!-- Formulaire d'inscription -->	
             </div>
         <!-- Définition des arrières plan superposés-->
 		<div class="screen__background"> 

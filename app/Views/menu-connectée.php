@@ -7,6 +7,7 @@
 			<style>
 				body {
 					font-family: "Lato", sans-serif;
+					
 				}
 
 				.sidenav {
@@ -18,7 +19,7 @@
 					left: 0;
 					background-color: #5C5696;
 					overflow-x: hidden;
-					padding-top: 180px;
+					padding-top: 70px;
 
 					box-shadow: 0px 0px 24px white;
 					/* box-shadow: 0px 0px 24px #5C5696; */
@@ -64,7 +65,7 @@
 	
 
 			<div class="sidenav wrap">
-			
+   				<img src="https://cdn.discordapp.com/attachments/903635476836139078/939172409645334558/Sans_titre_1.png" alt="">
 				<a href="/Front/deconnection">Deconnexion</a></br></br><br>
                 <?php 
                 #$session = session();
