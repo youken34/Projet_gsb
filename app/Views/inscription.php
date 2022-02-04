@@ -1,8 +1,8 @@
 <?php
- session_start();
- if (isset($_SESSION['connecté'])) {
-    $_SESSION['connecté'] = FALSE;
-}
+ 
+ if (isset($connected)) {
+		$connected = FALSE;
+		}
  /*
 $_SESSION['nom'] = "Bonal";
 $_SESSION['prenom'] = "Côme"; */

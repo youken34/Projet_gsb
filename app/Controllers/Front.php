@@ -13,7 +13,7 @@ class Front extends BaseController
     public function deconnection() {
         $session = session();
         session_destroy();
-        return redirect()->to("/Front/FicheFrais2");
+        return redirect()->to("/Front/index");
         #return view("deconnexion.php");
     }
 
@@ -29,12 +29,15 @@ class Front extends BaseController
     }
 
     public function index() {
-        return view("index.php");
+        $session = session();
+        $data = array('user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
+        return view("index.php", $data);
     }
 
     public function inscription() {
-        
-        return view("inscription.php");
+        $session = session();
+        $data = array('user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
+        return view("inscription.php", $data);
                 
                 
             }
@@ -72,8 +75,11 @@ class Front extends BaseController
                     }
                 }
             }
-        $data = array('dataToDisplay' => $dataToDisplay);
+        $data = array('dataToDisplay' => $dataToDisplay,
+         'user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
         // $data est un tableau avec ('nomVariableDansFichierSuivant' => $variableDansFichierLocal);
-        return view("noteDeFrais.php", $data);
+        
+
+        return view("noteDeFrais.php",$data);
     }
 }

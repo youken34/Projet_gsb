@@ -10,14 +10,16 @@ if ($user_idd && $connected == TRUE) {
         echo('Bonjour ' .  $user_idd . ' ,Bienvenue !  ');
 }
 else {
-    echo'Bonjour, vous n\'etes pas connecté';
-    
-}
+			echo "<script type=\"text/javascript\">window.alert ('Vous êtes devez être connecté pour accéder à cette page'); 
+			window.location='/Front/index'; </script>";
+		}
+	
+
 ?>
 </div>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
-<?php include "menu.php"; ?> 
+<?php include "menu-connectée.php"; ?> 
 <body>         <!-- Définition du style css !-->
     <style>
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');

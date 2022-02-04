@@ -54,15 +54,21 @@
 						font-size: 18px;
 					}
 				}
+				img {
+	   height : 200px;
+	
+   }
 			</style>
 		</head>
 
 	
 
 			<div class="sidenav wrap">
-				<a href="/Front/inscription">Page d'inscription</a> </br></br><br>
-				<a href="/Front/index">Page de connexion</a></br></br><br>
+			
+				<a href="/Front/deconnection">Deconnexion</a></br></br><br>
                 <?php 
                 #$session = session();
                 #$data = array('user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté")); ?>
+				<a href="/Front/FicheFrais2">Fiche de Frais <?php # $data ?> </a></br><br></br>
+				<a href="/Front/noteDeFrais">Historique</a>
 			</div>
