@@ -13,6 +13,7 @@ if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
 }
  */
 ?>
+<?php include "menu.php"; ?> 
 
 <!DOCTYPE html>
 <html lang="en">
