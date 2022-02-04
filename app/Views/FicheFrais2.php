@@ -58,7 +58,7 @@ label {
 .screen {		
 	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
 	position: relative;	
-	height: 750px;
+	height: 650px;
 	width: 450px;	
 	box-shadow: 0px 0px 24px #5C5696;
     border-radius: 30px;
@@ -245,15 +245,7 @@ label {
                         						
                         <input class="login__submit" type="submit" value="Envoyer"> </input>
 					</form>
-                        
-                        <form action="<?php echo base_url("Front/deconnection")?>">
-				        <input class="login__submit" type="submit" value="Deconnexion">
-                        </input>
-                    	</form>
-
-                    <form action="<?php echo base_url("Front/index")?>" method="POST">                  
-                        <input class="login__submit" type="submit" value="Connexion">	
-                    </form>		
+	
                     
             </div>
         <!-- Définition des arrières plan superposés-->
