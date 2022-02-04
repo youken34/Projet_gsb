@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+<?php include "menu.php"; ?> 
 
 <style>
 
 .Liam{
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 70%;
+    text-align: center ;
+    margin: auto;
   }
   
   .Liam td, .Liam th {
@@ -28,18 +31,18 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #2d87d1;
+    background-color: #5D54A4;
     color: white;
   }
 
 </style>
                         <table class="Liam">
                             <tr>
-                                <th>nbr_km</th>
-                                <th>cout_km</th>
-                                <th>restauration</th>
-                                <th>hotel</th>
-                                <th>evenementiel</th>
+                                <th>Nombre de Kilomètres</th>
+                                <th>Indémnité kilométrique</th>
+                                <th>Restauration</th>
+                                <th>Hôtel</th>
+                                <th>Evènementiel</th>
                             </tr>
     <?php        
 

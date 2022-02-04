@@ -17,7 +17,7 @@ else {
 </div>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
-
+<?php include "menu.php"; ?> 
 <body>         <!-- Définition du style css !-->
     <style>
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
@@ -216,7 +216,7 @@ label {
                         
                     <!-- Formulaire de la fiche de frais -->
 					
-                    <form action ="<?php echo base_url("Front/noteDeFrais")?>" method="POST">
+                    <form action ="<?php echo base_url("Back/frais")?>" method="POST">
                         <label for="nbr_km"> Nombre de kilomètre </label><br>
                         <input type="text" name="nbr_km">
 
