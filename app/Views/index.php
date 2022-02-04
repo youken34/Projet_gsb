@@ -1,7 +1,7 @@
 <?php
-session_start();
-if (isset($_SESSION['connecté'])) {
-    if ($_SESSION['connecté'] == TRUE) {
+#session_start();
+if (isset($connected)) {
+    if ($connected == TRUE) {
         echo "<script type=\"text/javascript\">window.alert ('Vous êtes déjà connecté'); 
         window.location='/Front/FicheFrais2'; </script>";
     }
@@ -202,6 +202,11 @@ label {
        
        text-align: left;
    }
+   img {
+	   height : 200px;
+	   align-items : center;
+	   justify-content
+   }
         </style> 
         <!-- Formulaire de connexion !-->
 
@@ -223,13 +228,12 @@ label {
                         <label>Mot de passe : </label>
                         <input type="password" name="mdp-co" class="login__input"/>
                     </div>
+					<br>
 				        <input class="login__submit" type="submit" value="connexion">
                         </input>
                     </form>
-                    <form action="<?php echo base_url("Front/inscription"); ?>" method="POST">
-                    <!-- Formulaire d'inscription -->
-                        <input class="login__submit" type="submit" value="Inscription">	
-                    </form>		
+					
+				
             </div>
         <!-- Définition des arrières plan superposés-->
 		<div class="screen__background"> 

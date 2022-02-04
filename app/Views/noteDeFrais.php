@@ -1,3 +1,14 @@
+<?php
+if ($connected == FALSE) {
+  echo "<script type=\"text/javascript\">window.alert ('Vous êtes devez être connecté pour accéder à cette page'); 
+  window.location='/Front/index'; </script>";
+}
+
+			
+		
+	
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +17,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php include "menu.php"; ?> 
+<?php include "menu-connectée.php"; ?> 
 
 <style>
 
