@@ -15,7 +15,7 @@ class Back extends BaseController
 
             # Première méthode 
             $var_recup = GETPDO($config);
-            $var_recup_ex = $var_recup->prepare("SELECT `identifiant`, `motDePasse` FROM authentification");
+            $var_recup_ex = $var_recup->prepare("SELECT `id`, `identifiant`, `motDePasse` FROM authentification");
             $var_recup_ex->execute();
             $données_verif = $var_recup_ex->fetchAll();
 
@@ -27,6 +27,7 @@ class Back extends BaseController
 
             # Assimilation de données aux variables de sessions
             $_SESSION['idd'] = $X;
+            
 
 
 
@@ -73,6 +74,14 @@ class Back extends BaseController
 
             $connexion = GETPDO($config);
             if (!empty($identifiant_utilisateur) and !empty($mdp_utilisateur)){
+                $recup_user = $connexion->query('SELECT * FROM authentification ');
+                $idUnique = $recup_user->fetchAll();
+                foreach ($idUnique as $i) {
+                    if ($i['identifiant'] === $identifiant_utilisateur) {
+                        return redirect()->to("/Front/erreurIdentifiant");
+                    }
+                    
+                }
             $insérer = $connexion->prepare('INSERT INTO authentification 
             (nom, prenom, mail, identifiant, motDePasse) VALUES (? , ? , ? , ? , ?)');
 

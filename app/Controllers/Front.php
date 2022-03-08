@@ -38,8 +38,10 @@ class Front extends BaseController
         $session = session();
         $data = array('user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
         return view("inscription.php", $data);
-                
-                
+    }    
+        public function erreurIdentifiant() {
+            echo "<script type=\"text/javascript\">window.alert ('Cet identifiant a déjà été pris'); 
+                    window.location='/Front/inscription'; </script>";
             }
     
     public function noteDeFrais() {
@@ -53,14 +55,15 @@ class Front extends BaseController
         // Première méthode via jointure interne
         $reponse = GETPDO($config);
 
-        $req = "SELECT f.nbr_km, f.cout_km, f.restauration, f.hotel, f.evenementiel 
-        from fichefrais f inner join authentification a on f.id_authentification = a.id";
-        $stmt = $reponse->prepare($req);
-        $stmt->execute();
-        $tableauFrais = $stmt->fetchAll();
+        $req = $reponse->prepare("SELECT f.nbr_km, f.cout_km, f.restauration, f.hotel, f.evenementiel 
+        from fichefrais f inner join authentification a on f.id_authentification = a.id
+        WHERE a.identifiant =:id");
+        $req->bindValue(':id', $session->get("idd"));
+        $req->execute();
+        $tableauFrais = $req->fetchAll();
         //--------------------------------------------------------------------
         // Deuxième méthode avec plusieurs auteurs de comparaison if
-       /* $execution = $reponse->query('SELECT `id`, `identifiant` FROM authentification');
+        $execution = $reponse->query('SELECT `id`, `identifiant` FROM authentification');
 
         //$execution->execute();
 
@@ -87,7 +90,7 @@ class Front extends BaseController
                         }
                     }
                 }
-            } */
+            } 
             $dataToDisplay2 = $tableauFrais;
         $data = array('dataToDisplay' => $dataToDisplay2,
          'user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
