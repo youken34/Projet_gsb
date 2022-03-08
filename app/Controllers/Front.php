@@ -44,24 +44,37 @@ class Front extends BaseController
     
     public function noteDeFrais() {
         $session = session();
-        include_once ("../app/Views/fonction-frais.php");
-        include_once ("../app/Views/config-frais.php");
+        //include_once ("../app/Views/fonction-frais.php");
+        //include_once ("../app/Views/config-frais.php");
 
+        include "../app/Views/fonction-page-accueil.php";
+        include "../app/Views/config-page-accueil.php";
+
+        // Première méthode via jointure interne
         $reponse = GETPDO($config);
 
-        $execution = $reponse->query('SELECT `id`, `identifiant` FROM authentification');
+        $req = "SELECT f.nbr_km, f.cout_km, f.restauration, f.hotel, f.evenementiel 
+        from fichefrais f inner join authentification a on f.id_authentification = a.id";
+        $stmt = $reponse->prepare($req);
+        $stmt->execute();
+        $tableauFrais = $stmt->fetchAll();
+        //--------------------------------------------------------------------
+        // Deuxième méthode avec plusieurs auteurs de comparaison if
+       /* $execution = $reponse->query('SELECT `id`, `identifiant` FROM authentification');
 
-        $execution->execute();
+        //$execution->execute();
 
         $fetchs = $execution->fetchAll();
+
         $dataToDisplay = array();
+
         foreach($fetchs as $fetch) {
 
             if ( $session->get("idd") === $fetch['identifiant']) {
                     
                     $execution2 = $reponse->query('SELECT * FROM fichefrais');
 
-                    $execution2->execute();
+                    //$execution2->execute();
 
                     $fetch2 = $execution2->fetchAll();
                 
@@ -74,12 +87,15 @@ class Front extends BaseController
                         }
                     }
                 }
-            }
-        $data = array('dataToDisplay' => $dataToDisplay,
+            } */
+            $dataToDisplay2 = $tableauFrais;
+        $data = array('dataToDisplay' => $dataToDisplay2,
          'user_idd' => $session->get("idd"), 'connected'=> $session->get("connecté"));
         // $data est un tableau avec ('nomVariableDansFichierSuivant' => $variableDansFichierLocal);
         
 
         return view("noteDeFrais.php",$data);
     }
+
+
 }
