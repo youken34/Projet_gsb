@@ -20,8 +20,8 @@ class Back extends BaseController
             $données_verif = $var_recup_ex->fetchAll();
 
             # Deuxième méthode 
-            $X = $_POST['identifiant-co'];
-            $Y = $_POST['mdp-co']; 
+            $X = filter_var($_POST['identifiant-co'], FILTER_SANITIZE_STRING);
+            $Y = filter_var($_POST['mdp-co'], FILTER_SANITIZE_STRING);
             $recup_user = $var_recup->prepare('SELECT * FROM authentification WHERE identifiant = ? AND motDePasse = ? ');
             $recup_user->execute(array($X, $Y)); 
 
@@ -60,11 +60,11 @@ class Back extends BaseController
 
     public function pageInscription() {
                     #if (empty($nom_utilisateur)) {
-            $nom_utilisateur = ($_POST['nom']);
-            $prenom_utilisateur = ($_POST['prenom']);
-            $mail_utilisateur = ($_POST['mail']);
-            $identifiant_utilisateur = ($_POST['identifiant']);
-            $mdp_utilisateur = ($_POST['mdp']);
+            $nom_utilisateur = filter_var($_POST['nom'], FILTER_SANITIZE_STRING);
+            $prenom_utilisateur = filter_var($_POST['prenom'], FILTER_SANITIZE_STRING);
+            $mail_utilisateur = filter_var($_POST['mail'], FILTER_SANITIZE_STRING);
+            $identifiant_utilisateur = filter_var($_POST['identifiant'], FILTER_SANITIZE_STRING);
+            $mdp_utilisateur = filter_var($_POST['mdp'], FILTER_SANITIZE_STRING);
             include "../app/Views/fonction-page-accueil.php";
 
             include "../app/Views/config-page-accueil.php";
@@ -124,10 +124,19 @@ class Back extends BaseController
                     }
 
                     $nombre_km = isset($_POST['nbr_km']) ?$_POST['nbr_km'] : null;
+                    $nombre_km = filter_var($nombre_km, FILTER_SANITIZE_STRING);
+
                     $coutkm = isset ($_POST['cout_km']) ?$_POST['cout_km'] : null;
+                    $coutkm = filter_var($coutkm, FILTER_SANITIZE_STRING);
+
                     $restau = isset($_POST['Restauration']) ?$_POST['Restauration'] : null;
+                    $restau = filter_var($restau, FILTER_SANITIZE_STRING);
+
                     $htl = isset ($_POST['hôtel']) ?$_POST['hôtel'] : null;
+                    $htl = filter_var($htl, FILTER_SANITIZE_STRING);
+
                     $event = isset($_POST['Evènementiel']) ?$_POST['Evènementiel'] : null;
+                    $event = filter_var($event, FILTER_SANITIZE_STRING);
 
                         $frais = GETPDO($config);
                         if (!empty($nombre_km) and !empty($restau) and !empty($htl) and !empty($event))
